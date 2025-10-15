@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Donas & Dulces</title>
+  <style>
+    /* Paleta: Rosa #FFCDC5, Azul #95C1E6, Amarillo #F9E37C */
+    :root{
+      --rosa: #FFCDC5;
+      --azul: #95C1E6;
+      --amarillo: #F9E37C;
+      --bg: #fffdfb;
+      --text: #2b2b2b;
+      --accent-dark: #4b2f26;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+    header{background:linear-gradient(90deg,var(--rosa),var(--azul));padding:12px 24px;position:sticky;top:0;z-index:1000;}
+    nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;}
+    nav a{color:var(--accent-dark);text-decoration:none;font-weight:bold;}
+    nav a.active{text-decoration:underline;}
+    .container{max-width:1100px;margin:auto;padding:24px;}
+    h1,h2,h3{text-align:center;margin:12px 0;color:var(--accent-dark);}
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:40px 0;}
+    .hero-text{flex:1;min-width:280px;}
+    .hero-text h1{font-size:2rem;margin-bottom:12px;}
+    .hero img{max-width:420px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1);}
+    .services,.faq,.section{padding:40px 0;}
+    .service-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+    .service-card{text-align:center;width:160px;}
+    .service-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:8px;}
+    .contact-phone{text-align:center;margin-top:20px;}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px;}
+    .product-card{background:#fff;padding:12px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.08);text-align:center;}
+    .product-card img{width:100%;height:150px;object-fit:cover;border-radius:8px;}
+    .product-card h3{margin:8px 0;}
+    .price{font-weight:bold;margin:6px 0;}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--rosa);border:none;cursor:pointer;font-weight:bold;}
+    footer{background:#eee;text-align:center;padding:16px;}
+    input,select{width:100%;padding:6px;margin:4px 0;border:1px solid #ccc;border-radius:6px;}
+    form{max-width:400px;margin:auto;}
+    table{width:100%;border-collapse:collapse;margin-top:16px;}
+    th,td{border:1px solid #ccc;padding:8px;text-align:center;}
+    .muted{color:rgba(0,0,0,0.6);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#inicio" class="active">Inicio</a>
+    <a href="#faq">FAQ</a>
+    <a href="#donas">Mini Donas</a>
+    <a href="#cupcakes">Cupcakes</a>
+    <a href="#galletas">Galletas</a>
+    <a href="#tortas">Tortas</a>
+    <a href="#checkout">Checkout</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- Inicio -->
+<section id="inicio" class="container hero">
+  <div class="hero-text">
+    <h1>El Sabor de Mini Donas y Dulces Caseros</h1>
+    <p>Disfruta de donas, cupcakes, galletas y tortas en su versión más tierna y deliciosa.</p>
+    <a href="#donas" class="btn">Comprar Donas</a>
+  </div>
+  <img src="https://via.placeholder.com/400x300.png?text=Mini+Donas" alt="Mini Donas">
+</section>
+
+<!-- Servicios -->
+<section class="services container">
+  <h2>Nuestros Productos</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="https://via.placeholder.com/100.png?text=Torta" alt="Torta">
+      <p>Tortas</p>
+    </div>
+    <div class="service-card">
+      <img src="https://via.placeholder.com/100.png?text=Cupcake" alt="Cupcake">
+      <p>Cupcakes</p>
+    </div>
+    <div class="service-card">
+      <img src="https://via.placeholder.com/100.png?text=Donas" alt="Donas">
+      <p>Mini Donas</p>
+    </div>
+    <div class="service-card">
+      <img src="https://via.placeholder.com/100.png?text=Galletas" alt="Galletas">
+      <p>Galletas</p>
+    </div>
+  </div>
+  <div class="contact-phone">
+    <strong>Pedidos al:</strong> <a href="tel:+541112345678">+54 11 1234 5678</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq container">
+  <h2>Preguntas Frecuentes</h2>
+  <div>
+    <h3>1. ¿Por qué mini donas?</h3>
+    <p>Porque son más portables y fáciles de hornear.</p>
+  </div>
+  <div>
+    <h3>2. ¿Por qué esta estética?</h3>
+    <p>Porque es tranquila y profesional.</p>
+  </div>
+  <div>
+    <h3>3. ¿Es libre de TAC?</h3>
+    <p>Sí.</p>
+  </div>
+</section>
+
+<!-- Donas -->
+<section id="donas" class="section container">
+  <h2>Mini Donas</h2>
+  <div class="products-grid">
+    <div class="product-card" data-id="donut1" data-name="Donut Clásica" data-price="10">
+      <img src="https://via.placeholder.com/200.png?text=Donut+Clasica" alt="">
+      <h3>Donut Clásica</h3>
+      <p class="price">$10</p>
+      <input type="number" min="1" value="1" class="qty">
+      <button class="btn add-cart">Agregar</button>
+    </div>
+    <div class="product-card" data-id="donut2" data-name="Donut Chocolate" data-price="12">
+      <img src="https://via.placeholder.com/200.png?text=Donut+Choco" alt="">
+      <h3>Donut Chocolate</h3>
+      <p class="price">$12</p>
+      <input type="number" min="1" value="1" class="qty">
+      <button class="btn add-cart">Agregar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Cupcakes -->
+<section id="cupcakes" class="section container">
+  <h2>Cupcakes</h2>
+  <div class="products-grid">
+    <div class="product-card" data-id="cup1" data-name="Cupcake Vainilla" data-price="18">
+      <img src="https://via.placeholder.com/200.png?text=Cupcake+Vainilla" alt="">
+      <h3>Cupcake Vainilla</h3>
+      <p class="price">$18</p>
+      <input type="number" min="1" value="1" class="qty">
+      <button class="btn add-cart">Agregar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Galletas -->
+<section id="galletas" class="section container">
+  <h2>Galletas</h2>
+  <div class="products-grid">
+    <div class="product-card" data-id="galleta1" data-name="Galletas Manteca" data-price="15">
+      <img src="https://via.placeholder.com/200.png?text=Galletas" alt="">
+      <h3>Galletas Manteca</h3>
+      <p class="price">$15</p>
+      <input type="number" min="1" value="1" class="qty">
+      <button class="btn add-cart">Agregar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Tortas -->
+<section id="tortas" class="section container">
+  <h2>Tortas</h2>
+  <div class="products-grid">
+    <div class="product-card" data-id="torta1" data-name="Torta Chocolate" data-price="100">
+      <img src="https://via.placeholder.com/200.png?text=Torta+Choco" alt="">
+      <h3>Torta Chocolate</h3>
+      <p class="price">$100</p>
+      <input type="number" min="1" value="1" class="qty">
+      <button class="btn add-cart">Agregar</button>
+    </div>
+  </div>
+</section>
+
+<!-- Checkout -->
+<section id="checkout" class="section container">
+  <h2>Checkout</h2>
+  <div id="cart-area"></div>
+  <form id="checkout-form">
+    <h3>Datos de entrega</h3>
+    <input type="text" name="name" placeholder="Nombre completo" required>
+    <input type="tel" name="phone" placeholder="Teléfono" required>
+    <input type="text" name="address" placeholder="Dirección" required>
+    <select name="payment" required>
+      <option value="">Método de pago</option>
+      <option value="efectivo">Efectivo</option>
+      <option value="mercadopago">MercadoPago</option>
+      <option value="transferencia">Transferencia</option>
+    </select>
+    <button type="submit" class="btn">Finalizar pedido</button>
+  </form>
+  <p id="order-result" class="muted"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> MiniDonas - Hecho con amor</p>
+</footer>
+
+<script>
+  function formatMoney(n){return "$"+Number(n).toFixed(2);}
+  function renderCart(){
+    const cartArea=document.getElementById("cart-area");
+    if(!cartArea) return;
+    const cart=JSON.parse(localStorage.getItem("cart")||"[]");
+    if(cart.length===0){cartArea.innerHTML="<p>Tu carrito está vacío.</p>";return;}
+    let html="<table><tr><th>Producto</th><th>Cant.</th><th>Precio</th><th>Subtotal</th></tr>";
+    let total=0;
+    cart.forEach(it=>{
+      let sub=it.price*it.qty;total+=sub;
+      html+=<tr><td>${it.name}</td><td>${it.qty}</td><td>${formatMoney(it.price)}</td><td>${formatMoney(sub)}</td></tr>;
+    });
+    html+=<tr><td colspan="3"><b>Total</b></td><td><b>${formatMoney(total)}</b></td></tr></table>;
+    html+='<button id="clear-cart" class="btn">Vaciar carrito</button>';
+    cartArea.innerHTML=html;
+    document.getElementById("clear-cart").onclick=()=>{localStorage.removeItem("cart");renderCart();};
+  }
+
+  document.addEventListener("click",e=>{
+    if(e.target.classList.contains("add-cart")){
+      const card=e.target.closest(".product-card");
+      const id=card.dataset.id;
+      const name=card.dataset.name;
+      const price=parseFloat(card.dataset.price);
+      const qty=parseInt(card.querySelector(".qty").value)||1;
+      let cart=JSON.parse(localStorage.getItem("cart")||"[]");
+      const existing=cart.find(i=>i.id===id);
+      if(existing){existing.qty+=qty;} else{cart.push({id,name,price,qty});}
+      localStorage.setItem("cart",JSON.stringify(cart));
+      alert(${qty} x ${name} agregado al carrito.);
+    }
+  });
+
+  document.getElementById("checkout-form").addEventListener("submit",e=>{
+    e.preventDefault();
+    localStorage.removeItem("cart");
+    renderCart();
+    document.getElementById("order-result").innerText="¡Gracias! Tu pedido fue recibido (simulado).";
+  });
+
+  document.getElementById("year").innerText=new Date().getFullYear();
+  renderCart();
+</script>
+
+</body>
+</html>
